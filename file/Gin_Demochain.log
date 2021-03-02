@@ -1,0 +1,89 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /p/*filepath              --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] HEAD   /p/*filepath              --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (3 handlers)
+[GIN-debug] GET    /index                    --> main.blockchainIndex (4 handlers)
+[GIN-debug] GET    /blockchain/get           --> main.blockchainGetHandler (6 handlers)
+[GIN-debug] GET    /blockchain/upload        --> main.startUpload (6 handlers)
+[GIN-debug] GET    /blockchain/examine       --> main.startExamine (6 handlers)
+[GIN-debug] GET    /blockchain/myapplication --> main.findMyApplicaion (6 handlers)
+[GIN-debug] GET    /blockchain/myexamination --> main.findMyExamination (6 handlers)
+[GIN-debug] GET    /blockchain/register      --> main.startRegister (4 handlers)
+[GIN-debug] GET    /blockchain/login         --> main.startLogin (4 handlers)
+[GIN-debug] GET    /blockchain/logout        --> main.startLogout (6 handlers)
+[GIN-debug] GET    /blockchain/uploadmypemfile --> main.startUploadPemFile (6 handlers)
+[GIN-debug] POST   /examine                  --> main.examine (6 handlers)
+[GIN-debug] POST   /logout                   --> main.logout (4 handlers)
+[GIN-debug] POST   /login                    --> main.login (4 handlers)
+[GIN-debug] POST   /register                 --> main.register (4 handlers)
+[GIN-debug] POST   /upload                   --> main.fileUpload (6 handlers)
+[GIN-debug] POST   /blockchain/dealexamine   --> main.dealExamine (6 handlers)
+[GIN-debug] POST   /uploadmypemfile          --> main.uploadPemFile (6 handlers)
+[GIN-debug] POST   /testmypemfile            --> main.testPemFile (6 handlers)
+[GIN-debug] GET    /blockchain/download      --> main.downloadPDF (6 handlers)
+[GIN-debug] GET    /downloadsignexe          --> main.signEXEDownload (6 handlers)
+[GIN-debug] GET    /captcha                  --> main.main.func1 (4 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2021/03/02 - 15:52:33 | 200 |    435.1827ms |       127.0.0.1 | GET      "/blockchain/upload"
+[GIN] 2021/03/02 - 15:52:44 | 500 |    2.5252535s |       127.0.0.1 | POST     "/upload"
+[GIN] 2021/03/02 - 15:55:10 | 401 |      1.9937ms |       127.0.0.1 | GET      "/blockchain/upload"
+[GIN] 2021/03/02 - 15:55:11 | 403 |      2.9921ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 15:55:12 | 200 |     32.4402ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 15:55:16 | 200 |     63.5743ms |       127.0.0.1 | GET      "/blockchain/upload"
+[GIN] 2021/03/02 - 15:55:21 | 500 |    119.2952ms |       127.0.0.1 | POST     "/upload"
+[GIN] 2021/03/02 - 15:55:22 | 200 |    101.6399ms |       127.0.0.1 | GET      "/blockchain/upload"
+[GIN] 2021/03/02 - 15:56:32 | 500 |    702.4769ms |       127.0.0.1 | POST     "/upload"
+[GIN] 2021/03/02 - 15:56:36 | 200 |     63.4193ms |       127.0.0.1 | GET      "/blockchain/upload"
+[GIN] 2021/03/02 - 15:57:39 | 200 |    461.8338ms |       127.0.0.1 | POST     "/upload"
+[GIN] 2021/03/02 - 15:59:54 | 401 |      1.9949ms |       127.0.0.1 | GET      "/blockchain/myapplication"
+[GIN] 2021/03/02 - 15:59:55 | 403 |      4.0393ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 15:59:56 | 200 |     43.8821ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 15:59:59 | 200 |    125.2874ms |       127.0.0.1 | GET      "/blockchain/logout"
+[GIN] 2021/03/02 - 16:00:00 | 200 |    118.5358ms |       127.0.0.1 | POST     "/logout"
+[GIN] 2021/03/02 - 16:00:01 | 200 |      3.0344ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 16:00:04 | 200 |       998.2µs |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 16:00:04 | 200 |      1.9958ms |       127.0.0.1 | GET      "/captcha"
+[GIN] 2021/03/02 - 16:00:18 | 400 |       1.995ms |       127.0.0.1 | POST     "/login"
+[GIN] 2021/03/02 - 16:00:21 | 200 |      1.9939ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 16:00:21 | 200 |       996.6µs |       127.0.0.1 | GET      "/captcha"
+[GIN] 2021/03/02 - 16:00:48 | 400 |      1.9985ms |       127.0.0.1 | POST     "/login"
+[GIN] 2021/03/02 - 16:00:49 | 200 |      1.9939ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 16:00:49 | 200 |       998.7µs |       127.0.0.1 | GET      "/captcha"
+[GIN] 2021/03/02 - 16:01:03 | 301 |    128.5574ms |       127.0.0.1 | POST     "/login"
+[GIN] 2021/03/02 - 16:01:03 | 200 |      3.9879ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 16:01:07 | 200 |     31.0732ms |       127.0.0.1 | GET      "/blockchain/myexamination"
+[GIN] 2021/03/02 - 16:01:12 | 200 |     97.3573ms |       127.0.0.1 | GET      "/blockchain/examine"
+[GIN] 2021/03/02 - 16:03:58 | 401 |      1.9961ms |       127.0.0.1 | POST     "/examine"
+[GIN] 2021/03/02 - 16:03:59 | 403 |      2.9913ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 16:04:00 | 200 |     88.7632ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 16:04:04 | 200 |     34.3048ms |       127.0.0.1 | GET      "/blockchain/examine"
+[GIN] 2021/03/02 - 16:04:10 | 200 |    166.5562ms |       127.0.0.1 | POST     "/examine"
+[GIN] 2021/03/02 - 16:07:53 | 404 |            0s |       127.0.0.1 | GET      "/examine"
+[GIN] 2021/03/02 - 16:07:56 | 404 |            0s |       127.0.0.1 | GET      "/"
+[GIN] 2021/03/02 - 16:08:00 | 200 |      3.9901ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 16:08:00 | 200 |    152.5928ms |       127.0.0.1 | GET      "/p/ljt.jpg"
+[GIN] 2021/03/02 - 16:08:01 | 200 |      1.9943ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 16:08:01 | 200 |      1.0195ms |       127.0.0.1 | GET      "/captcha"
+[GIN] 2021/03/02 - 16:08:08 | 301 |    134.7483ms |       127.0.0.1 | POST     "/login"
+[GIN] 2021/03/02 - 16:08:08 | 200 |      3.0287ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 16:08:11 | 200 |    133.6634ms |       127.0.0.1 | GET      "/blockchain/myapplication"
+[GIN] 2021/03/02 - 16:08:31 | 200 |    119.8712ms |       127.0.0.1 | GET      "/blockchain/myapplication"
+[GIN] 2021/03/02 - 16:12:13 | 401 |      2.0064ms |       127.0.0.1 | POST     "/blockchain/dealexamine"
+[GIN] 2021/03/02 - 16:12:14 | 200 |       4.012ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 16:12:15 | 200 |      1.0001ms |       127.0.0.1 | GET      "/captcha"
+[GIN] 2021/03/02 - 16:12:26 | 301 |    115.9701ms |       127.0.0.1 | POST     "/login"
+[GIN] 2021/03/02 - 16:12:26 | 200 |      2.9464ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 16:12:27 | 200 |    119.3756ms |       127.0.0.1 | GET      "/blockchain/examine"
+[GIN] 2021/03/02 - 16:12:30 | 200 |    110.6206ms |       127.0.0.1 | POST     "/examine"
+[GIN] 2021/03/02 - 16:12:37 | 200 |    169.7308ms |       127.0.0.1 | POST     "/blockchain/dealexamine"
+[GIN] 2021/03/02 - 16:12:43 | 200 |    113.6384ms |       127.0.0.1 | GET      "/blockchain/examine"
+[GIN] 2021/03/02 - 16:12:47 | 200 |    119.6809ms |       127.0.0.1 | GET      "/blockchain/myapplication"
+[GIN] 2021/03/02 - 16:13:08 | 200 |    110.9933ms |       127.0.0.1 | GET      "/blockchain/get"
+[GIN] 2021/03/02 - 16:16:19 | 401 |      1.9952ms |       127.0.0.1 | GET      "/blockchain/myexamination"
+[GIN] 2021/03/02 - 16:16:20 | 403 |      3.9909ms |       127.0.0.1 | GET      "/blockchain/login"
+[GIN] 2021/03/02 - 16:16:21 | 200 |    136.2756ms |       127.0.0.1 | GET      "/index"
+[GIN] 2021/03/02 - 16:16:22 | 200 |    153.9706ms |       127.0.0.1 | GET      "/blockchain/myexamination"

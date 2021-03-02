@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>上传PEM文件</title>
+</head>
+<body bgcolor="#f0f8ff">
+<font size="5"><b>当前登录用户：{{.userName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;组别：{{.Group}}</b></font>
+<form action="/uploadmypemfile" method="post" enctype="multipart/form-data">
+    <font size="3"><b>页面说明：</b></font>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;①本页面用于用户上传自己的公钥文件，以便在提交请求时进行验证。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;②在使用签名软件的过程中，若pem文件不存在或已被删除，会自动生成新的公钥私钥文件。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;③同时，软件会打印出公钥文件与私钥文件的哈希值，请将两个哈希值填入相应的文本框内。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;④并将保存于目录"E:/Key/Users/public.pem"的文件上传。</p>
+    <font size="3"><b>签名软件下载：</b></font><a href="http://36b1c95548.qicp.vip/downloadsignexe" title="点击开始下载签名软件"><img src="/p/start_download.jpg" width="100px"/></a>
+    <hr>
+    <br><br><br><br>
+    <font color="red" size="5">公钥</font>文件哈希值：<input type="text" name="publicHash" style="width: 600px"/>
+    <br><br>
+        <font color="red" size="5">私钥</font>文件哈希值：<input type="text" name="privateHash" style="width: 600px"/>
+    <br><br>
+    请选择签名软件生成的<font color="red" size="5">public.pem</font>公钥文件：
+    <input type="file" name="pem">
+    <br><br>
+    <input type="submit" value="上传">
+</form>
+</body>
+</html>

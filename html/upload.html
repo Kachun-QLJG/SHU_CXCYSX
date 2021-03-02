@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>上传请求</title>
+</head>
+<body bgcolor="#f0f8ff">
+<font size="5"><b>当前登录用户：{{.userName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;组别：{{.Group}}</b></font><br><br>
+<font size="3"><b>使用说明：</b></font>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;①首先下载签名软件，放置到待上传文件的同一目录下</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;②<font color="red" size="5">如果是首次使用签名软件，需要先上传PEM文件。</font><a href="http://36b1c95548.qicp.vip/blockchain/uploadmypemfile" title="跳转上传PEM文件">前往上传PEM文件</a></p>
+<form action="/testmypemfile" method="post">&nbsp;&nbsp;&nbsp;&nbsp;验证当前私钥文件是否已经上传：<br>&nbsp;&nbsp;&nbsp;&nbsp;私钥文件哈希值：<input type="text" name="priHash" style="width: 600px"/><input type="submit" formtarget="_blank" value="验证"/></form>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;③若已上传PEM文件，按软件提示输入账号密码（本地不进行验证操作），指定pdf文档，输入申请人姓名、身份证号码。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;④随后软件将给出本次运行的相关信息，按提示复制到对应内容，注意不要复制空格。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;⑤并将pdf文件上传。</p>
+<font size="3"><b>签名软件下载：</b></font><a href="http://36b1c95548.qicp.vip/downloadsignexe" title="点击开始下载签名软件"><img src="/p/start_download.jpg" width="100px"/></a>
+<hr>
+<br><br>
+<font color="red" size="5">请先阅读上述使用说明！</font><br>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    随机字符串：<input type="text" name="randStr" value="{{.randStr}}" readonly />
+    <br><br>
+    用户名：<input type="text" name="userName" value="{{.userName}}" readonly />
+    <br><br>
+    申请人姓名：<input type="text" name="name"/>
+    <br><br>
+    申请人证件号码：<input type="text" name="id"/>
+    <br><br>
+    文件哈希值：<input type="text" name="pdfHash" style="width: 600px"/>
+    <br><br>
+    数字签名：<input type="text" name="sign" style="width: 1400px"/>
+    <br><br>
+    私钥文件哈希值：<input type="text" name="PrivateHash" style="width: 600px"/>
+    <br><br>
+    验证码：<input type="text" name="verificationCode" style="width: 600px"/>
+    <br><br>
+    请选择待申请的PDF文档<font color="red" size="5">【仅支持PDF】</font>：
+    <input type="file" name="pdf">
+    <br><br>
+    <input type="submit" value="上传">
+</form>
+
+</body>
+</html>

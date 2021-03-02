@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>待审核申请</title>
+</head>
+<body>
+用户名：{{.userName}}
+<br>
+组别：{{.Group}}
+<br>
+记录数：{{.len}}
+<br>
+详细记录：{{.appToBeExamined}}
+<br><br><br><br><br><br>
+<form id="form" action="/examine" method="post" >
+    请输入想要审查的条目的时间戳：<input type="text" name="appId"></input><br><br>
+    <button type="submit">提交</button>
+</body>
+</html>
